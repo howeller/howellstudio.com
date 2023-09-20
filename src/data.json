@@ -1,0 +1,55 @@
+{
+	"global":{
+		"githubUrl":"https://www.github.com/howeller",
+		"linkedinUrl":"https://www.linkedin.com/in/workwithhhowell"
+	},
+	"hero": {
+		"img": {
+			"srcset": "assets/headshot@3x.jpg 1500w, assets/headshot@2x.jpg 1000w, assets/headshot@1x.jpg 700w",
+			"src": "assets/headshot@3x.jpg",
+			"alt": "Eric Howell Portrait"
+		},
+		"h2": "Hello",
+		"p": "I'm Eric and I am a Front End Developer based in Oakland,&nbsp;CA. The past 18 years I've worked in the digital advertising industry and have a storied career developing in project teams to build digital ads, landing pages, CMS tools, and micro-sites for Fortune&nbsp;500&nbsp;clients. Please reach out. I'd love to connect with&nbsp;you."
+	},
+	"work":[
+		{
+			"id": "amex",
+			"img-direction-class": "img-right",
+			"h3": "Planning Calculator",
+			"client": "American Experss",
+			"stack": "Handlebars, Gulp, Vanilla&nbsp;JS",
+			"layout": "Amex&nbsp;DLS",
+			"img": {
+				"href": "../work/amex-calculator/aus/",
+				"srcset":"assets/amex@2x.png 1570w, assets/amex@1x.png 787w",
+				"src": "assets/amex@2x.png",
+				"alt": "AmEx Calculator"
+			},
+			"p": "Our AMEX client asked us to build them a planning calculator that displays monthly payment breakdowns from user inputted debt amounts. I used Handlebars templates to generate multiple calculators for separate regions and&nbsp;languages.",
+			"cta": [
+				{"txt": "View Australia Calculator", "href": "../work/amex-calculator/aus/"},
+				{"txt": "View Canada Calculator (English)", "href": "../work/amex-calculator/ca_en/"},
+				{"txt": "View Canada Calculator (French)", "href": "../work/amex-calculator/ca_fr/"}
+			]
+		},
+		{
+			"id": "nw-banner",
+			"img-direction-class": "img-left",
+			"h3": "Dynamic Ad Preview Tool",
+			"client": "Nationwide Insurance",
+			"stack": "Smarty, Gulp, PHP, GSAP",
+			"_layout": "Amex&nbsp;DLS",
+			"img": {
+				"href": "../work/nationwide-ia-preview-tool/preview/",
+				"srcset":"assets/nwIA@3x.jpg 2840w, assets/nwIA@2x.jpg 1420w, assets/nwIA@1x.jpg 710w",
+				"src": "assets/amex@2x.png",
+				"alt": "Nationwide Preview Site"
+			},
+			"p": "Our Nationwide account team had a need to review their Dynamic HTML ads without processing edits through the Google Studio DCO platform. They wanted test new copy in their animated units without getting a developer or anyone in production involved. I partnered with the back-end dev to build a custom preview site that pulled in the Google Sheet that housed the images and copy for all the listed dynamic HTML ads. ",
+			"cta": [
+				{"txt": "View Preview Tool", "href": "../work/nationwide-ia-preview-tool/preview/"}
+			]
+		}
+	]
+}

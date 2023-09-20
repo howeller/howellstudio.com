@@ -1,0 +1,24 @@
+{
+  "name": "howellstudio23",
+  "version": "1.0.0",
+  "description": "portfoio site",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/howeller/howellstudio.com.git"
+  },
+  "author": "howeller",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/howeller/howellstudio.com/issues"
+  },
+  "homepage": "https://github.com/howeller/howellstudio.com#readme",
+  "devDependencies": {
+    "webpack": "^5.88.2",
+    "webpack-cli": "^5.1.4",
+    "webpack-dev-server": "^4.15.1"
+  }
+}
