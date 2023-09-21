@@ -84,12 +84,16 @@ header h1 span.orange {
 
 /* README SECTION */
 
-section, section.work-container {
+section, .work-container {
 	display: flex;
 	justify-content: space-around;
 	gap: 0;
 	margin: 0;
 	border-bottom: var(--border);
+}
+section.hero{
+	flex-direction: row;
+	flex-wrap: wrap;
 }
 section.img-left{
 	flex-direction:row-reverse;
