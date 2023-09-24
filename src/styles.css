@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Barlow:wght@500&display=swap');
 
 :root {
-	--highligh-color: orange;
+	--highligh-color: darkorange;
 	--background-color: #eee;
 	--amex-blue: #016ecf;
 	--txt-color: #666666;
@@ -62,6 +62,11 @@ button, input {
 	-webkit-transition: all .35s;
 	transition: all .35s;
 }
+.hide{
+	visibility: hidden;
+	opacity: 0;
+}
+
 div#site-container{
 	display: block;
 	/* place-content: top; */
@@ -82,7 +87,7 @@ header h1 {
 	font-size: max(5.5vw, 2.5em);
 	font-weight: 200;
 	text-align: center;
-	padding: max(1px, 2vw) 0;
+	padding: max(1px, 1vh) 0;
 }
 
 header h1 span.space {
@@ -266,7 +271,7 @@ footer {
 	gap: 1vw;
 	padding: 0 clamp(1rem, 5vw, 2rem);
 }
-footer .social-container{
+.social-container{
 	overflow: hidden;
 	width: fit-content;
 }
@@ -293,10 +298,7 @@ footer svg {
 }
 
 /*  Email form */
-#email-form{
-	visibility: hidden;
-	opacity: 0;	
-}
+
 
 .form-container {
 	background-color: rgba(255, 255, 255, 0.85);
@@ -310,18 +312,24 @@ footer svg {
 	z-index: 9;
 }
 
-.form-container form {
+.form-container div.form-wrapper {
 	background-color: var(--background-color);
 	border: var(--border);
 	position: relative;
 	width: 95%;
 	max-width: 500px;
 	display: block;
-	padding: 1rem;
 	margin: 1vh 0;
 	font-family: var(--ff-header);
 	text-transform: uppercase;
 	box-shadow: rgba(100, 100, 111, 0.5) 0px 7px 29px 0px;
+}
+.form-container form {
+	/* width: 100%;
+	height: 100%; */
+}
+div.input-wrapper {
+	padding: 1rem;
 }
 .form-container input, textarea, select {
 	display: block;
@@ -332,7 +340,9 @@ footer svg {
 	font-weight: 200;
 	/* color: var(--accent-color); */
 }
-
+.form-container textarea{
+	height: 200px;
+}
 .form-container label {
 	display: inline-block;
 	padding-bottom: 5px;
@@ -363,5 +373,18 @@ footer svg {
 }
 input#submitter {
 	border: var(--border);
+}
+form #form-response{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	background-color: var(--highligh-color);
+	color: var(--accent-color);
+	font-size: var(--fs-h2);
+	font-family: var(--ff-primary);
+	text-align: center;
 }
 /* .form-container label[for="subject"]{ display: block; } */

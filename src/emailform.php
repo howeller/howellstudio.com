@@ -1,49 +1,34 @@
 <?php 
-if(isset($_POST['submit'])){
-    $to = "eric@howellstudio.com"; // this is your Email address
-    $from = $_POST['email']; // this is the sender's Email address
-    $name = $_POST['name'];
-    // $first_name = $_POST['first_name'];
-    // $last_name = $_POST['last_name'];
-    $subject = "Form submission";
-    // $subject2 = "Copy of your form submission";
-    $message = $name . " wrote the following:" . "\n\n" . $_POST['message'];
-    // $message = $first_name . " " . $last_name . " wrote the following:" . "\n\n" . $_POST['message'];
-    // $message2 = "Here is a copy of your message " . $first_name . "\n\n" . $_POST['message'];
-    $headers = "From:" . $from;
-    // $headers2 = "From:" . $to;
-    mail($to,$subject,$message,$headers);
-    // mail($from,$subject2,$message2,$headers2); // sends a copy of the message to the sender
-    echo "Mail Sent. Thank you " . $name . "! I will contact you shortly.";
-    // You can also use header('Location: thank_you.php'); to redirect to another page.
-    }
-?>
-/* 
-if ($HTTP_POST_VARS['txtEmail']) {
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+		// $to = "howelleric@yahoo.com"; // this is your Email address
+		$to = "eric@howellstudio.com"; // this is your Email address
+		$name = $_POST['name'];
+		$email = $_POST['email']; // this is the sender's Email address
+		$subject = "Contact Form Submission from $name";
+		$message = $_POST['message'];
+		$silly = ($_POST['silly']!=="") ? $_POST['silly'] . " are the best donuts ever!" : "I do not like donuts and you are not funny.";
+		$messageBody = "Name: $name\nEmail: $email\n\nWrote this message:\n$message\n\nP.S. $silly";
+		// $messageBody = $name . " wrote the following:" . "\n\n" . $message . "\n\n" . $silly;
 
-		$bodytag = preg_replace("/\r\n|\n\r|\n|\r/", "\n", $HTTP_POST_VARS['txtMessage']);
-		
-		/* recipients */
-		$recipient .= "eric@howellstudio.com";
-		
-		/* subject */
-		$subject = $HTTP_POST_VARS['txtSubject'];
-		
-		/* message */
-		$message = $bodytag . "\n";
-		
-		/* paste name and email together to create from variable */
-		$from = $HTTP_POST_VARS['txtName'] . " " . "<" . $HTTP_POST_VARS['txtEmail'] . ">";
-		
-		/* headers, From cc's, bcc's, etc */
-		$headers .= "From: $from\n";
-				
-		/* and now mail it */
-		mail($recipient, $subject, $message, $headers);
-		
-		
-		echo "Your mail has been sent.<br>";
-} else {
-	echo "Please go back to the email form.";
-}
-*/
+		// $headers = "From:" . $email;
+		// $headers = "From: eric@howellstudio.com"; // authorized address to send from
+		$headers = "From: $name <$email>";
+
+		// Send the email
+    if (mail($to, $subject, $messageBody, $headers, "-feric@howellstudio.com")) {
+			// Form submitted successfully
+				$response = ["success" => true, "message" => "Thank you for your message. We will get back to you soon!"];
+		} else {
+				// Email sending failed
+				$response = ["success" => false, "message" => "Oops! Something went wrong. Please try again later."];
+		}
+
+		// Return the response as JSON
+		header("Content-Type: application/json");
+		echo json_encode($response);
+		// You can also use header('Location: thank_you.php'); to redirect to another page.
+		}else {
+		// If the form wasn't submitted via POST, redirect or display an error message.
+			echo "Oops - There was an error. Please try this again.";
+		}
+?>
