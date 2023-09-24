@@ -4,7 +4,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 		$to = "eric@howellstudio.com"; // this is your Email address
 		$name = $_POST['name'];
 		$email = $_POST['email']; // this is the sender's Email address
-		$subject = "Contact Form Submission from $name";
+		$subject = "howellstudio Contact Form Mail from $name";
 		$message = $_POST['message'];
 		$silly = ($_POST['silly']!=="") ? $_POST['silly'] . " are the best donuts ever!" : "I do not like donuts and you are not funny.";
 		$messageBody = "Name: $name\nEmail: $email\n\nWrote this message:\n$message\n\nP.S. $silly";
