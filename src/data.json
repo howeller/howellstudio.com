@@ -34,8 +34,25 @@
 			]
 		},
 		{
-			"id": "nw-banner",
+			"id": "synchrony",
 			"img-direction-class": "img-left",
+			"h3": "Car Care Landing Page",
+			"client": "Synchrony Bank",
+			"_stack": "",
+			"img": {
+				"href": "../work/synchrony-landing-page",
+				"srcset":"assets/synchrony@3x.jpg 2840w, assets/synchrony@2x.jpg 1420w, assets/synchrony@1x.jpg 710w",
+				"src": "assets/synchrony@2x.png",
+				"alt": "Nationwide Preview Site"
+			},
+			"p": "Synchrony Bank asked us to build this landing page for their Car Care program. It needed to match the look and feel of the existing site and provided a single stylesheet to follow. I did my best to recreate a responsive design that was engaging to users.",
+			"cta": [
+				{"txt": "View Landing Page", "href": "../work/synchrony-landing-page"}
+			]
+		},
+		{
+			"id": "nw-banner",
+			"img-direction-class": "img-right",
 			"h3": "Dynamic Ad Preview Tool",
 			"client": "Nationwide Insurance",
 			"stack": "Smarty, Gulp, PHP, GSAP",
@@ -43,12 +60,29 @@
 			"img": {
 				"href": "../work/nationwide-ia-preview-tool/preview/",
 				"srcset":"assets/nwIA@3x.jpg 2840w, assets/nwIA@2x.jpg 1420w, assets/nwIA@1x.jpg 710w",
-				"src": "assets/amex@2x.png",
+				"src": "assets/nwIA@2x.png",
 				"alt": "Nationwide Preview Site"
 			},
 			"p": "Our Nationwide account team had a need to review their Dynamic HTML ads without processing edits through the Google Studio DCO platform. They wanted test new copy in their animated units without getting a developer or anyone in production involved. I partnered with the back-end dev to build a custom preview site that pulled in the Google Sheet that housed the images and copy for all the listed dynamic HTML ads. ",
 			"cta": [
 				{"txt": "View Preview Tool", "href": "../work/nationwide-ia-preview-tool/preview/"}
+			]
+		},
+		{
+			"id": "elta-email",
+			"img-direction-class": "img-left",
+			"h3": "Responsive HTML Email",
+			"client": "Colgate Palmolive - EltaMD",
+			"stack": "Handlebars, Gulp",
+				"img": {
+				"href": "../work/eltamd-email",
+				"srcset":"assets/elta@3x.jpg 2840w, assets/elta@2x.jpg 1420w, assets/elta@1x.jpg 710w",
+				"src": "assets/elta@2x.png",
+				"alt": "EltaMD email thumbnails in light and darkmode"
+			},
+			"p": "The EltaMD team tasked me to create a responsive HTML email that also had a dark mode theme. At the time this was quiet a challenge as dark mode was just introduced and it had poor support with most email clients. So I coded this using a graceful degradation style. ",
+			"cta": [
+				{"txt": "View HTML Email", "href": "../work/eltamd-email/"}
 			]
 		}
 	]

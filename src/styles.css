@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Barlow:wght@500&display=swap');
 
 :root {
-	--highligh-color: darkorange;
+	--highligh-color: tomato;
 	--background-color: #eee;
 	--amex-blue: #016ecf;
 	--txt-color: #666666;
@@ -119,6 +119,9 @@ section.img-right{
 	flex-direction: row;
 	flex-wrap: wrap-reverse;
 }
+main section:last-of-type{
+	padding-bottom: 10vh;
+}
 .hero-img-wrapper {
 	flex: 1 1 450px;
 	display: flex;
@@ -199,7 +202,6 @@ h4 span {
 section h4:last-of-type{
 	margin-bottom: 1rem;
 }
-
 div.cta-container {
 	display: flex;
 	flex-direction: row;
@@ -298,7 +300,6 @@ footer svg {
 }
 
 /*  Email form */
-
 
 .form-container {
 	background-color: rgba(255, 255, 255, 0.85);
