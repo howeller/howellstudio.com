@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Barlow:wght@500&display=swap');
 
 :root {
-	--highligh-color: tomato;
+	--highlight-color: tomato;
 	--background-color: #eee;
 	--amex-blue: #016ecf;
 	--txt-color: #666666;
@@ -20,6 +20,18 @@
 	--cta-txt-color: black;
 	--padding-h2: clamp(1rem, 5vw, 2rem);
 	--padding-section: clamp(1rem, 5vw, 1.5rem);
+	--nav-h2-offset: -5vw;
+}
+@media(max-width:1024px){
+	nav .nav-h2{
+		--nav-h2-offset: -7vw
+	}
+}
+
+@media(max-width:600px){
+	nav .nav-h2{
+		--nav-h2-offset: 0;
+	}
 }
 /* [data-theme=light] {
 	--accent-color: #666666;
@@ -75,6 +87,7 @@ div#site-container{
 	max-width: 2000px;
 }
 header {
+	background-color: var(--background-color);
 	position: sticky;
 	top: 0;
 	width: 100%;
@@ -83,7 +96,7 @@ header {
 }
 
 header h1 {
-	background-color: var(--background-color);
+	/* background-color: var(--background-color); */
 	font-weight: 200;
 	font-size: max(5.5vw, 2.5em);
 	line-height: .7;
@@ -96,7 +109,7 @@ header h1 span.space {
 }
 
 header h1 span.orange {
-	color: var(--highligh-color);
+	color: var(--highlight-color);
 }
 
 /* README SECTION */
@@ -194,9 +207,12 @@ h3 {
 	font-size: var(--fs-h3);
 	padding: 0 0 .5rem;
 }
+h4{
+	font-size: var(--fs-h3);
+}
 h4 span {
 	font-family: var(--ff-primary);
-	color: var(--highligh-color);
+	color: var(--highlight-color);
 	font-weight: 200;
 	text-transform: none;
 }
@@ -210,8 +226,9 @@ div.cta-container {
 	justify-content: space-around;
 	width: 100%;
 }
-div.cta-container a {
-	
+section p a {
+	color: var(--highlight-color);
+	text-decoration: underline;
 }
 a.cta{
 	display: inline-block;
@@ -226,7 +243,6 @@ a.cta{
 	padding: .8rem;
 	margin-top: 0.8rem;
 	position: relative;
-	/* overflow: hidden; */
 	border: var(--border);
 	width: 100%;
 }
@@ -235,7 +251,7 @@ a.wipe {
 	transition: color 0.3s;
 }
 a.wipe:after {
-  background-color: var(--highligh-color);
+  background-color: var(--highlight-color);
 	width: 100%;
   height: 101%;
   display: block;
@@ -243,21 +259,36 @@ a.wipe:after {
   position: absolute;
   top: 0;
   left: 0;
-  transition: transform 0.2s cubic-bezier(0.215, 0.61, 0.355, 1);
-	transform: translateX(-100%);
+	animation: slideOut 0.3s forwards;
   z-index: -1;
 }
 a.wipe:hover {
 	color: white;
-	/* transform: translateX(-100%) */
+	
 }
 a.wipe:hover:after {
-	transform: translateX(0%)
+	animation: slideIn 0.3s forwards;
+}
+/* Define the hover state styles */
+@keyframes slideIn {
+	0% {
+		transform: translateX(-100%);
+	}
+	100% {
+		transform: translateX(0%);
+	}
+}
+/* Define keyframes for unhover animation */
+@keyframes slideOut {
+	0% {
+		transform: translateX(0%);
+	}
+	100% {
+		transform: translateX(100%);
+	}
 }
 
-.accent-color {
-  fill: var(--accent-color);
-}
+/* Social Iconds and contact buttons */
 
 footer {
 	height: 50px;
@@ -274,21 +305,63 @@ footer {
 	gap: 1vw;
 	padding: 0 clamp(1rem, 5vw, 2rem);
 }
+nav {
+	background-color: var(--background-color);
+	border-top: var(--border);
+	overflow: hidden;
+	position: relative;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 100%;
+	height: 30px;
+}
+nav .btn-wrapper {
+	position: sticky;
+	width: 100%;
+	height: 100%;
+	padding: 0 clamp(1rem, 5vw, 2rem);
+	display:flex;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: center;
+	gap: 1vw;
+	/* line-height: 0; */
+}
+nav .nav-h2 {
+	/* width: 100%; */
+	margin: 0 auto;
+	position: relative;
+	font-family: var(--ff-primary);
+	font-weight: 200;
+	font-size: clamp(.8rem, 2vw, 1rem);
+	text-transform: none;
+	transform: translateX(var(--nav-h2-offset));
+}
 .social-container{
 	overflow: hidden;
 	width: fit-content;
+	line-height: 0;
 }
-footer a.wipe {
-	border: var(--border);
+footer a.wipe, nav a.wipe {
+	/* border: var(--border); */
+	border-right: var(--border);
 	color: var(--accent-color);
 	cursor: pointer;
 	font-family: var(--ff-header);
-	padding: 0.5rem;
+	padding: 15px 10px;
 	overflow: hidden;
 	display: inline-block;
 	position: relative;
+	line-height: 0;
 }
-footer svg {
+.social-container:first-child a{
+	border-left: var(--border);
+	font-size: clamp(.8rem, 2vw, 1rem);
+}
+
+nav
+footer svg, nav svg {
 	width: auto;
 	height: 3vh;
 	/* height: 90%; */
@@ -371,7 +444,7 @@ div.input-wrapper {
 	content: "×";
 } */
 .form-container button.close-btn:hover, input#submitter:hover {
-	background-color: var(--highligh-color);
+	background-color: var(--highlight-color);
 }
 input#submitter {
 	border: var(--border);
@@ -383,7 +456,7 @@ form #form-response{
 	position: absolute;
 	width: 100%;
 	height: 100%;
-	background-color: var(--highligh-color);
+	background-color: var(--highlight-color);
 	color: var(--accent-color);
 	font-size: var(--fs-h2);
 	font-family: var(--ff-primary);
