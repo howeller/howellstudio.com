@@ -1,0 +1,28 @@
+.hero {
+  @include section-flex();
+  flex-direction: row;
+	flex-wrap: wrap;
+  
+  .hero-txt-wrapper {
+    flex:1 1 410px;
+    padding: var(--padding-section);
+
+    p {
+      font-size: var(--fs-hero);
+    }
+  } 
+  
+  .hero-img-wrapper {
+    flex: 1 1 450px;
+    display: flex;
+    justify-content: center;
+    overflow: hidden;
+    height: clamp(30vh, 40vw, 55vh);
+
+    img {
+      object-fit: cover;
+      object-position: center center;
+      width: 100%;
+    }
+  }
+}

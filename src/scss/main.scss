@@ -1,0 +1,41 @@
+main {
+  
+  .img-left{
+    flex-direction:row-reverse;
+    flex-wrap: wrap-reverse;
+  }
+  .img-right{
+    flex-direction: row;
+    flex-wrap: wrap-reverse;
+  }
+
+  .work-container{
+    @include section-flex();
+    justify-content: space-between;
+    gap: clamp(1rem, 5vw, 2rem);
+    padding: clamp(1rem, 5vw, 2rem);
+
+    &:last-of-type{
+      padding-bottom: 10vh;
+    }
+
+    .work-txt-wrapper{
+      flex: 1 1 350px;
+    }
+    
+    .work-img-wrapper {
+      display: flex;
+      justify-content: center;
+      overflow: hidden;
+      flex: 2 1 300px;
+        
+      img {
+        border: var(--border);
+        object-fit: cover;
+        object-position: top left;
+        width: 100%;
+        margin: 0 auto;
+      }
+    }
+  }
+}

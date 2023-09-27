@@ -1,0 +1,22 @@
+:root {
+	--highlight-color: tomato;
+	--background-color: #eee;
+	--amex-blue: #016ecf;
+	--txt-color: #666666;
+	--border: 1px solid grey;
+	--ff-primary: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+	--ff-header: 'Barlow', sans-serif;
+	--ff-cta: 'Barlow', sans-serif;
+	--fs-h2: clamp(1.2rem, 5vw, 2.1rem);
+	--fs-h3: clamp(1rem, 5vw, 1.5rem);
+	--fs-hero: clamp(1.4rem, 2.1vw, 1.9rem);
+	--fs-heroV1: clamp(1rem, 2.1vw, 1.9rem);
+	--fs-p: clamp(1.2rem, 2.1vw, 1.6rem);
+	--fs-p2: max(2vw, 1rem);
+	--fs-cta: clamp(.7rem, 2.1vw, 1rem);
+	--cta-back-color:grey;
+	--cta-txt-color: black;
+	--padding-h2: clamp(1rem, 5vw, 2rem);
+	--padding-section: clamp(1rem, 5vw, 1.5rem);
+	--nav-h2-offset: -5vw;
+}
