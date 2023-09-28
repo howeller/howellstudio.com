@@ -1,16 +1,22 @@
 {
-  "name": "gerber-hero",
+  "name": "howellstudio23",
   "version": "1.0.0",
-  "description": "",
-  "main": "gulpfile.js",
+  "description": "portfoio site",
+  "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "keywords": [
-    "responsive"
-  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/howeller/howellstudio.com.git"
+  },
+
   "author": "howeller",
   "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/howeller/howellstudio.com/issues"
+  },
+  "homepage": "https://github.com/howeller/howellstudio.com#readme",
   "devDependencies": {
     "del": "^6.0.0",
     "fs": "^0.0.1-security",

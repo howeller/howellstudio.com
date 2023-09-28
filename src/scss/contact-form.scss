@@ -29,10 +29,11 @@
       width: 100%;
       height: 100%;
       background-color: var(--highlight-color);
-      color: var(--accent-color);
+      color: black;
       font-size: var(--fs-h2);
       font-family: var(--ff-primary);
       text-align: center;
+      text-transform: none;
     }
 
     .input-wrapper {
