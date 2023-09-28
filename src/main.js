@@ -34,7 +34,7 @@
 		console.table(formData);
 
 		// Send the form data to the PHP script using AJAX
-		fetch("emailform.php", { method: "POST", body: formData, })
+		fetch("contactAction.php", { method: "POST", body: formData, })
 		.then(response => response.text())
 		.then(data => {
 			console.table(data);
@@ -46,7 +46,7 @@
 			_form.response.style.opacity = 1;
 		})
 		.catch(error => {
-			console.error("Error:", error);
+			console.error("Error: ", error);
 			_form.response.innerHTML = toString(error);
 			_form.response.style.backgroundColor = 'red';
 		});
@@ -85,8 +85,8 @@
 		});
 	}	
 
-
 	/* Handlebars loading */
+
 	let _request =   new XMLHttpRequest();
 	_request.open('GET', 'data.json');
 	
@@ -112,7 +112,7 @@
 	function buildHTML(myData) {
 		console.log('buildHTML');
 		const compiledTemplate = Handlebars.compile(id('hbs-template').innerHTML);
-		id('site-container').innerHTML = compiledTemplate(myData);
+		document.querySelector('.site-container').innerHTML = compiledTemplate(myData);
 		// document.body.innerHTML = compiledTemplate(myData);
 	}
 })(window, document);

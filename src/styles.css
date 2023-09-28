@@ -78,6 +78,16 @@ button, input {
 	visibility: hidden;
 	opacity: 0;
 }
+.ohnohoney{
+	opacity: 0;
+  clip: rect(0 0 0 0) !important;
+	position: absolute;
+	top: 0;
+	left: 0;
+	height: 0;
+	width: 0;
+	z-index: -1;
+}
 
 div#site-container{
 	display: block;
@@ -158,7 +168,7 @@ p {
 	font-weight: 200;
 }
 
-.hero p{
+.hero p {
 	font-size: var(--fs-hero);
 }
 main p {
@@ -457,9 +467,10 @@ form #form-response{
 	width: 100%;
 	height: 100%;
 	background-color: var(--highlight-color);
-	color: var(--accent-color);
+	color: black;
 	font-size: var(--fs-h2);
 	font-family: var(--ff-primary);
 	text-align: center;
+	text-transform: none;
 }
 /* .form-container label[for="subject"]{ display: block; } */
