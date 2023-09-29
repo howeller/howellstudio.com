@@ -127,9 +127,13 @@ header h1 span.orange {
 section, .work-container {
 	display: flex;
 	justify-content: space-around;
+	align-content: flex-end;
 	gap: 0;
 	margin: 0;
-	border-bottom: var(--border);
+	background-color: var(--background-color);
+	border-top: var(--border);
+	overflow: hidden;
+	/* min-height: 90vh; */
 }
 section.hero{
 	flex-direction: row;
@@ -143,8 +147,11 @@ section.img-right{
 	flex-direction: row;
 	flex-wrap: wrap-reverse;
 }
-main section:last-of-type{
-	padding-bottom: 10vh;
+.work-container{
+	/* min-height: 90vh; */
+}
+.work-container:last-of-type{
+	padding-bottom: 30vh;
 }
 .hero-img-wrapper {
 	flex: 1 1 450px;
@@ -186,7 +193,8 @@ h2 {
 }
 h2.title {
 	display: block;
-	border-bottom: var(--border);
+	background-color: var(--background-color);
+	border-top: var(--border);
 	padding: var(--padding-h2);
 }
 
