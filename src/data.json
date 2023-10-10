@@ -10,7 +10,7 @@
 			"alt": "Eric Howell Portrait"
 		},
 		"h2": "Hello",
-		"p": "I'm Eric and I am a Front End Developer based in Oakland,&nbsp;CA. The past 18 years I've worked in the digital advertising industry and have a storied career developing in project teams to build digital ads, landing pages, CMS tools, and micro-sites for Fortune&nbsp;500&nbsp;clients. Please reach out. I'd love to connect with&nbsp;you."
+		"p": "I'm Eric and I am a Front End Developer based in Oakland,&nbsp;CA. The past 18 years I have worked in the digital advertising industry. I have a storied career doing development on project teams that built digital ads, landing pages, CMS tools, and micro-sites for Fortune&nbsp;500&nbsp;clients. Please reach out. I'd love to connect with&nbsp;you."
 	},
 	"work":[
 		{
@@ -24,7 +24,7 @@
 				"src": "assets/synchrony@2x.png",
 				"alt": "Nationwide Preview Site"
 			},
-			"p": "Synchrony Bank asked us to build this landing page for their Car Care program. It needed to match the look and feel of the existing site and provided a single stylesheet to follow. I did my best to recreate a responsive design that was engaging to users.",
+			"p": "Synchrony Bank tasked us to build a landing page for their Car Care program. It needed to match the look and feel of the existing site. This was a challenge as they only provided a single stylesheet to follow. I created a responsive design that was engaging to users.",
 			"cta": [
 				{"txt": "Launch Landing Page", "href": "./work/synchrony-landing-page"}
 			]
@@ -42,7 +42,7 @@
 				"src": "assets/amex@2x.png",
 				"alt": "AmEx Calculator"
 			},
-			"p": "Our AMEX client asked us to build them a planning calculator that displays monthly payment breakdowns from user inputted debt amounts. I used Handlebars templates to generate multiple calculators for separate regions and&nbsp;languages.",
+			"p": "I built this planning calculator for AMEX. It displays monthly payment breakdowns from the debt amount provided by the user. I used Handlebars templates to generate multiple calculators for separate regions and&nbsp;languages.",
 			"cta": [
 				{"txt": "View Australia Calculator", "href": "./work/amex-calculator/aus/"},
 				{"txt": "View Canada Calculator (English)", "href": "./work/amex-calculator/ca_en/"},
@@ -60,7 +60,7 @@
 				"src": "assets/gerber@2x.png",
 				"alt": "Nationwide Preview Site"
 			},
-			"p": "Gerber asked for a pair of responsive and animated hero modules for gerber.com. This was a big challenge to animate these modules with the different breakpoints in the layout designs. I had to utilize debouncing to reset the timeline animation each time the screen is resized.",
+			"p": "Gerber asked for a pair of responsive and animated hero modules for gerber.com. I animated these modules with different breakpoints in the layout designs. I utilized debouncing to reset the timeline animation each time the screen is resized.",
 			"cta": [
 				{"txt": "View Plantastic Module", "href": "./work/gerber-plantastic-module"},
 				{"txt": "View Photo Search Module", "href": "./work/gerber-photosearch-module"}
@@ -77,7 +77,7 @@
 				"src": "assets/nwIA@2x.png",
 				"alt": "Nationwide Preview Site"
 			},
-			"p": "Our Nationwide account team had a need to review their Dynamic HTML ads without processing edits through the Google Studio DCO platform. They wanted test new copy in their animated units without getting a developer or anyone in production involved. I partnered with the back-end dev to build a custom preview site that pulled in the Google Sheet that housed the images and copy for all the listed dynamic HTML ads. ",
+			"p": "Our Nationwide account team wanted to be able to test new versions of their dynamic HTML ads without developer involvement. I partnered with a back-eand developer to build a custom preview site that pulled in the Google Feed Sheet with all of the copy and image references for the new dynamic versions. This preview tool saved the team countless hours by allowing them to bypass the Google Studio Platform during their review process.",
 			"cta": [
 				{"txt": "Launch Preview Tool", "href": "./work/nationwide-ia-preview-tool/preview/"}
 			]
@@ -93,7 +93,7 @@
 				"src": "assets/nwEmail@3x.png",
 				"alt": "Nationwide Email CMS"
 			},
-			"p": "I paired with a backend developer to create this CMS for enable our Nationwide Financial team to generate monthly emails posting their content into a Smartsheet and using our UI to view, test, and send the newsletters. I created several precompiled templates and modules that were stitched together using the SMARTY templating engine. Because HTML emails require you to code like it's 1999, I used <a href=\"https://www.npmjs.com/package/gulp-inline-css\" target=\"_blank\">gulp-inline-css<\/a> to inline all of the CSS in the modules. <a href=\"https://dxa.ogilvy-digital.com/nationwide/nwf-email/\" target=\"_blank\" >Click here to view the UI<\/a>. You can even use my credentials: u: eric pw: nwf2020",
+			"p": "I partnered with a backend developer to create this CMS. It enabled our Nationwide Financial team to generate monthly emails by listing their content into a Smartsheet doc. They then could use our UI to view, test, and send the newsletters. I created several precompiled templates and modules that were stitched together using the SMARTY templating engine.  Because HTML emails require you to code like it's 1999, I used <a href=\"https://www.npmjs.com/package/gulp-inline-css\" target=\"_blank\">gulp-inline-css<\/a> to inline all of the CSS in the modules. <a href=\"https://dxa.ogilvy-digital.com/nationwide/nwf-email/\" target=\"_blank\" >Click here to view the UI<\/a>. You can even use my credentials: u: eric pw: nwf2020",
 			"_cta": [
 				{"txt": "Launch CMS UI", "href": "https://dxa.ogilvy-digital.com/nationwide/nwf-email/"},
 				{"txt": "Launch CMS UI", "href": "./work/nationwide-email-cms/"}
@@ -113,7 +113,7 @@
 				"src": "assets/elta@2x.png",
 				"alt": "EltaMD email thumbnails in light and darkmode"
 			},
-			"p": "The EltaMD team tasked me to create a responsive HTML email that also had a dark mode theme. At the time this was quiet a challenge as dark mode was just introduced and it had poor support with most email clients. So I coded this to balance methods of progressive enhancement for newer email client and graceful degradation for older ones.. and Outlook. ",
+			"p": "The EltaMD team tasked me to create a responsive HTML email that had a dark mode theme. At the time, dark mode was such a new modality that it had poor support with most email clients. I coded this email to balance methods of progressive enhancement for newer email clients along with graceful degradation for older ones, including Outlook.",
 			"cta": [
 				{"txt": "View HTML Email", "href": "./work/eltamd-email/"}
 			]
@@ -129,7 +129,7 @@
 				"src": "assets/goldbox@2x.png",
 				"alt": "Hogarth GoldBox Landing page"
 			},
-			"p": "Our internal team at Hogarth wished to hold a contest where all employees where mailed a QR code. Only a few received URLs that led to the winning landing page. I worked with a global team to assemble the winning and losing pages. Both pages playing a video animation and the winning page led to an email form where. ",
+			"p": "Our internal team at Hogarth wished to hold a contest where all employees were mailed a QR code. Only a few recipients received URLs that led to the winning landing page. I worked with a global team to assemble the winning and losing pages. Both pages played a video animation. The winning page led to an email form where the winner could submit their contact information. This project was a trans-continental collaboration with another backend dev in Brasil, a video editor in Miami, DevOps in London, and a project manager in New York.",
 			"cta": [
 				{"txt": "Launch Landing Page ", "href": "./work/goldbox-contest/"}
 			]
