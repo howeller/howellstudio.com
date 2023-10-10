@@ -57,30 +57,32 @@
 
 		_sections.forEach((_section, i) => {
 
-			let isImgRight = _section.classList.contains("img-right");
+
+			let isImgRight = _section.classList.contains("img-right"),
+				_elements = [_section.querySelector('.work-img-wrapper'), _section.querySelector('.work-txt-wrapper')];
 			// console.log(isImgRight);
-			gsap.set([_section.querySelector('.work-img-wrapper'), _section.querySelector('.work-txt-wrapper')], {css:{transformPerspective:400, transformStyle:"preserve-3d", backfaceVisibility:"hidden"}});
+			gsap.set(_elements, { css:{visibility:'hidden',transformPerspective:500, transformStyle:"preserve-3d", backfaceVisibility:"hidden"}});
 	
-			gsap.from([_section.querySelector('.work-img-wrapper'), _section.querySelector('.work-txt-wrapper')], {
+			gsap.from(_elements, {
 				autoAlpha:0,
 				// x: isImgRight ? '+=100%' :'-=100%',
 				// skewY:0.5,
 				// skewX:0.5,
+				scale:0.2,
 				rotationY: isImgRight ? 90 : -90,
-				// rotationY: -180, 
 				// rotationZ: 90, 
-				duration: 2,
-				stagger: .5, 
+				duration: 1,
+				stagger: .2, 
 				transFormOrigin:'center center center',
 				scrollTrigger:{
 					trigger: _section.querySelector('.work-img-wrapper'),
-					toggleActions:'restart pause resume reset',
-					start: 'top bottom', // element, viewport
-					end: `top top`,
+					toggleActions:'restart none resume reset',
+					start: 'top 80%%', // element, viewport
+					end: `top center`,
 					// end: `() => += ${(getHeaderHeight()-1)}`,
 					scrub: true,
 					invalidateOnRefresh: true,
-					markers:true
+					// markers:true
 				}
 			});
 		});
