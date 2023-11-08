@@ -152,14 +152,39 @@
 			_form.response.style.opacity = 1;
 		})
 		.catch(error => {
-			console.error("Error: ", error);
+			console.error("Server Error: ", error);
 			_form.response.innerHTML = toString(error);
 			_form.response.style.backgroundColor = 'red';
 		});
-		// id("form-container").style.display = "none";
-			// makeVisible(_form.response);
-			// _form.response.style.opacity = 1;
-	}
+	} 
+/* 	async function onSubmitClick(event) {
+		cl('* Submit Click >>');
+		event.preventDefault(); // Prevent the default form submission behavior
+		try{
+			const formData = new FormData(this);
+			console.table(formData);
+
+			// Send the form data to the PHP script using AJAX
+			const response  = await fetch("contactAction.php", { method: "POST", body: formData, });
+			const data = await response.text();
+			response.then(data => {
+				console.table(data);
+				// console.log(`What type is response data? ${typeof(data)}`);
+				// let _message = typeof(data) == 'string' : JSON.parse(data).message : data.message;
+				// Display the response from the PHP script
+				_form.response.innerHTML = JSON.parse(data).message;
+				makeVisible(_form.response);
+				_form.response.style.opacity = 1;
+			}).catch(error => {
+				console.error("Server Error: ", error);
+				_form.response.innerHTML = toString(error);
+				_form.response.style.backgroundColor = 'red';
+			});
+		}catch(error){
+			console.error("Error: ", error);
+			_form.response.innerHTML = toString(error);
+			_form.response.style.backgroundColor = 'red';		}
+	}*/
 
 	function onContactClick(e) {
 		cl('on Open ContactClick');
@@ -201,7 +226,7 @@
 		try{
 			const response = await fetch('data.json');
 			const data = await response.json();
-			console.log('LOADED',data);
+			console.log('DATA LOADED',data);
 			buildHTML(data);
 			init();
 		}catch(error){
