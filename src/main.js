@@ -197,7 +197,19 @@
 
 	/* Handlebars loading */
 
-	let _request =   new XMLHttpRequest();
+	async function loadData() {
+		try{
+			const response = await fetch('data.json');
+			const data = await response.json();
+			console.log('LOADED',data);
+			buildHTML(data);
+			init();
+		}catch(error){
+			console.error("Handlebatrs Data didn't load", error);
+		}
+	}
+
+	/* let _request =   new XMLHttpRequest();
 	_request.open('GET', 'data.json');
 	
 	_request.onload = function () {
@@ -212,9 +224,9 @@
 	}
 	_request.onerror = function () {
 		console.log("WHAT'S UP WITH THE ERROR?");
-	}
+	} 
 
-	_request.send();
+	_request.send();*/
 	console.log("GO!");
 
 	// Handlebars.registerPartial('main', 'partials/main.hbs');
@@ -225,4 +237,6 @@
 		document.querySelector('.site-container').innerHTML = compiledTemplate(myData);
 		// document.body.innerHTML = compiledTemplate(myData);
 	}
+
+	window.addEventListener('DOMContentLoaded', loadData);
 })(window, document);
