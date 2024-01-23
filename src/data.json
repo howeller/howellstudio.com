@@ -33,7 +33,7 @@
 			"id": "amex",
 			"img-direction-class": "img-right",
 			"h3": "Planning Calculator",
-			"client": "American Experss",
+			"client": "American Express",
 			"stack": "Handlebars, Gulp, Vanilla&nbsp;JS, Amex&nbsp;DLS", 
 			"_layout": "Amex&nbsp;DLS",
 			"img": {
