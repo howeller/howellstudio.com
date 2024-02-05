@@ -1,25 +1,26 @@
 main {
   
-  .img-left{
+  .img-left {
     flex-direction: row-reverse;
     flex-wrap: wrap-reverse;
   }
-  .img-right{
+  .img-right {
     flex-direction: row;
     flex-wrap: wrap-reverse;
   }
 
-  .work-container{
+  .work-container {
     @include section-flex();
+		
     justify-content: space-between;
     gap: clamp(1rem, 5vw, 2rem);
     padding: clamp(1rem, 5vw, 2rem);
 
-    &:last-of-type{
-      padding-bottom: 10vh;
+    &:last-of-type {
+			padding-bottom: 30vh;
     }
 
-    .work-txt-wrapper{
+    .work-txt-wrapper {
       flex: 1 1 350px;
     }
     

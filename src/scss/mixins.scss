@@ -5,11 +5,15 @@
 }
 
 @mixin section-flex {
+	// border-bottom: var(--border);
   display: flex;
+	align-content: flex-end;
 	justify-content: space-around;
 	gap: 0;
 	margin: 0;
-	border-bottom: var(--border);
+	background-color: var(--background-color);
+	border-top: var(--border);
+	overflow: hidden;
 }
 // Breakpoints
 // @media (min-width: 64em) {

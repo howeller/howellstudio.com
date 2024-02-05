@@ -1,3 +1,5 @@
+@import "variables";
+
 header {
     background-color: var(--background-color);
     position: sticky;
@@ -12,6 +14,7 @@ header {
     line-height: .7;
     text-align: center;
     padding: max(1vw, 2vw) 0;
+		text-transform: lowercase;
 
     .space {
       letter-spacing: -1em;
@@ -48,7 +51,26 @@ header {
           border-left: var(--border);
           font-size: clamp(.8rem, 2vw, 1rem);
         }
+				svg {
+					width: auto;
+					height: 3vh;
+					object-fit: contain;
+					display: inline-block;
+					&:first-of-type { padding-right: .5em; }
+				}
       }
+
+			a.wipe {
+				border-right: var(--border);
+				color: var(--accent-color);
+				cursor: pointer;
+				font-family: var(--ff-header);
+				padding: 15px 10px;
+				overflow: hidden;
+				display: inline-block;
+				position: relative;
+				line-height: 0;
+			}
       
       .nav-h2 {
         position: relative;
@@ -59,6 +81,10 @@ header {
         text-transform: none;
         transform: translateX(var(--nav-h2-offset));
       }
+
+			.nav-btn {
+				text-transform: uppercase;
+			}
     }
   }  
 }
