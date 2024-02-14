@@ -10,6 +10,7 @@ main {
   }
 
   .work-container {
+
     @include section-flex();
 		
     justify-content: space-between;
@@ -20,6 +21,14 @@ main {
 			padding-bottom: 30vh;
     }
 
+		.cta-container {
+			display: flex;
+			flex-direction: row;
+			flex-wrap: wrap;
+			justify-content: space-around;
+			width: 100%;
+		}
+		
     .work-txt-wrapper {
       flex: 1 1 350px;
     }

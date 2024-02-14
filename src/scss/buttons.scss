@@ -7,7 +7,6 @@
 		transform: translateX(0%);
 	}
 }
-
 /* Define keyframes for unhover animation */
 @keyframes slideOut {
 	0% {
@@ -39,34 +38,35 @@ a.cta{
 	border: var(--border);
 	width: 100%;
 }
+
 a.wipe {
 	overflow: hidden;
 	transition: color 0.3s;
+	z-index: 0;
 
-  &::after{
-    background-color: var(--highlight-color);
-    width: 100%;
-    height: 101%;
-    display: block;
-    content: " ";
-    position: absolute;
-    top: 0;
-    left: 0;
-    animation: slideOut 0.3s forwards;
-    z-index: -1;    
-  }
+	&:hover {
+		color: white;
 
-  &:hover {
-    color: white;
+		&::after {
+			animation: slideIn 0.3s forwards;
+		}
+	}
 
-    &::after {
-      animation: slideIn 0.3s forwards;
-    }
-  }
+	&::after{
+		animation: slideOut 0.3s forwards;
+		background-color: var(--highlight-color);
+		width: 100%;
+		height: 101%;
+		display: block;
+		content: " ";
+		position: absolute;
+		top: 0;
+		left: 0;
+		z-index: -1;    
+	}
 }
 
-footer a.wipe, nav a.wipe {
-	/* border: var(--border); */
+nav a.wipe {
 	border-right: var(--border);
 	color: var(--accent-color);
 	cursor: pointer;
