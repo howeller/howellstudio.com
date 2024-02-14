@@ -1,0 +1,138 @@
+{
+	"global":{
+		"githubUrl":"https://www.github.com/howeller",
+		"linkedinUrl":"https://www.linkedin.com/in/workwithhowell"
+	},
+	"hero": {
+		"img": {
+			"srcset": "assets/headshot@3x.jpg 1500w, assets/headshot@2x.jpg 1000w, assets/headshot@1x.jpg 700w",
+			"src": "assets/headshot@3x.jpg",
+			"alt": "Eric Howell Portrait"
+		},
+		"h2": "Hello",
+		"p": "I'm Eric and I am a Front End Developer based in Oakland,&nbsp;CA. For the past 18 years I have worked in the digital advertising industry. I have a storied career doing development on project teams that build digital ads, landing pages, CMS tools, and micro-sites for Fortune&nbsp;500&nbsp;clients. Please reach out. I would love to connect with&nbsp;you."
+	},
+	"work":[
+		{
+			"id": "synchrony",
+			"imgDirectionClass": "img-left",
+			"h3": "Car Care Landing Page",
+			"client": "Synchrony Bank",
+			"_stack": "",
+			"img": {
+				"srcset":"assets/synchrony@3x.jpg 2840w, assets/synchrony@2x.jpg 1530w, assets/synchrony@1x.jpg 710w",
+				"src": "assets/synchrony@2x.png",
+				"alt": "Nationwide Preview Site"
+			},
+			"p": "Synchrony Bank tasked us to build a landing page for their Car Care program. It needed to match the look and feel of the existing site. This was a challenge as they only provided a single stylesheet to follow. I created a responsive design that was engaging to users.",
+			"cta": [
+				{"txt": "Launch Landing Page", "href": "./work/synchrony-landing-page"}
+			]
+		},
+		{
+			"id": "amex",
+			"imgDirectionClass": "img-right",
+			"h3": "Planning Calculator",
+			"client": "American Express",
+			"stack": "Handlebars, Gulp, Vanilla&nbsp;JS, Amex&nbsp;DLS", 
+			"_layout": "Amex&nbsp;DLS",
+			"img": {
+				"srcset":"assets/amex@3x.png 2840w, assets/amex@2x.png 1530w, assets/amex@1x.png 710w",
+				"_srcset":"assets/amex@2x.png 1570w, assets/amex@1x.png 787w",
+				"src": "assets/amex@2x.png",
+				"alt": "AmEx Calculator"
+			},
+			"p": "I built this planning calculator for AMEX. It displays monthly payment breakdowns from the debt amount provided by the user. I used Handlebars templates to generate multiple calculators for separate regions and&nbsp;languages.",
+			"cta": [
+				{"txt": "View Australia Calculator", "href": "./work/amex-calculator/aus/"},
+				{"txt": "View Canada Calculator (English)", "href": "./work/amex-calculator/ca_en/"},
+				{"txt": "View Canada Calculator (French)", "href": "./work/amex-calculator/ca_fr/"}
+			]
+		},
+		{
+			"id": "gerber",
+			"imgDirectionClass": "img-left",
+			"h3": "Animated Hero Module",
+			"client": "Gerber",
+			"stack": "Sass, GSAP, Gulp",
+			"img": {
+				"srcset":"assets/gerber@3x.jpg 2840w, assets/gerber@2x.jpg 1530w, assets/gerber@1x.jpg 710w",
+				"src": "assets/gerber@2x.png",
+				"alt": "Nationwide Preview Site"
+			},
+			"p": "Gerber asked for a pair of responsive and animated hero modules for gerber.com. I animated these modules with different breakpoints in the layout designs. I utilized debouncing to reset the timeline animation each time the screen is resized.",
+			"cta": [
+				{"txt": "View Plantastic Module", "href": "./work/gerber-plantastic-module"},
+				{"txt": "View Photo Search Module", "href": "./work/gerber-photosearch-module"}
+			]
+		},
+		{
+			"id": "nw-banner",
+			"imgDirectionClass": "img-right",
+			"h3": "Dynamic Ad Preview Tool",
+			"client": "Nationwide Insurance",
+			"stack": "Smarty, Gulp, PHP, GSAP",
+			"img": {
+				"srcset":"assets/nwIA@3x.jpg 2840w, assets/nwIA@2x.jpg 1530w, assets/nwIA@1x.jpg 710w",
+				"src": "assets/nwIA@2x.png",
+				"alt": "Nationwide Preview Site"
+			},
+			"p": "Our Nationwide account team wanted to be able to test new versions of their dynamic HTML ads without developer involvement. I partnered with a back-eand developer to build a custom preview site that pulled in the Google Feed Sheet with all of the copy and image references for the new dynamic versions. This preview tool saved the team countless hours by allowing them to bypass the Google Studio Platform during their review process.",
+			"cta": [
+				{"txt": "Launch Preview Tool", "href": "./work/nationwide-ia-preview-tool/preview/"}
+			]
+		},
+		{
+			"id": "nw-email",
+			"imgDirectionClass": "img-left",
+			"h3": "HTML Email CMS",
+			"client": "Nationwide Financial",
+			"stack": "Smarty, Gulp Inliner, PHP",
+			"img": {
+				"srcset":"assets/nwEmail@3x.jpg 2840w, assets/nwEmail@2x.jpg 1530w, assets/nwEmail@1x.jpg 710w",
+				"src": "assets/nwEmail@3x.png",
+				"alt": "Nationwide Email CMS"
+			},
+			"p": "I partnered with a backend developer to create this CMS. It enabled our Nationwide Financial team to generate monthly emails by listing their content into a Smartsheet doc. They then could use our UI to view, test, and send the newsletters. I created several precompiled templates and modules that were stitched together using the SMARTY templating engine.  Because HTML emails require you to code like it's 1999, I used <a href=\"https://www.npmjs.com/package/gulp-inline-css\" target=\"_blank\">gulp-inline-css<\/a> to inline all of the CSS in the modules. <a href=\"https://dxa.ogilvy-digital.com/nationwide/nwf-email/\" target=\"_blank\" >Click here to view the UI<\/a>. You can even use my credentials: u: eric pw: nwf2020",
+			"_cta": [
+				{"txt": "Launch CMS UI", "href": "https://dxa.ogilvy-digital.com/nationwide/nwf-email/"},
+				{"txt": "Launch CMS UI", "href": "./work/nationwide-email-cms/"}
+			],
+			"__cta": [
+				{"txt": "Launch CMS UI  <span style=\"text-transform:lowercase;\">u:eric, pw: nwf2020<\/span>", "href": "https://dxa.ogilvy-digital.com/nationwide/nwf-email/"}
+			]
+		},
+		{
+			"id": "elta-email",
+			"imgDirectionClass": "img-right",
+			"h3": "Responsive HTML Email",
+			"client": "Colgate Palmolive - EltaMD",
+			"stack": "Handlebars, Gulp",
+				"img": {
+				"srcset":"assets/elta@3x.jpg 2840w, assets/elta@2x.jpg 1530w, assets/elta@1x.jpg 710w",
+				"src": "assets/elta@2x.png",
+				"alt": "EltaMD email thumbnails in light and darkmode"
+			},
+			"p": "The EltaMD team tasked me to create a responsive HTML email that had a dark mode theme. At the time, dark mode was such a new modality that it had poor support with most email clients. I coded this email to balance methods of progressive enhancement for newer email clients along with graceful degradation for older ones, including Outlook.",
+			"cta": [
+				{"txt": "View HTML Email", "href": "./work/eltamd-email/"}
+			]
+		},
+		{
+			"id": "goldbox",
+			"imgDirectionClass": "img-left",
+			"h3": "Contest Landing Page",
+			"client": "Hogarth",
+			"_stack": "Handlebars, Gulp",
+				"img": {
+				"srcset":"assets/goldbox@3x.jpg 2840w, assets/goldbox@2x.jpg 1530w, assets/goldbox@1x.jpg 710w",
+				"src": "assets/goldbox@2x.png",
+				"alt": "Hogarth GoldBox Landing page"
+			},
+			"p": "Our internal team at Hogarth wished to hold a contest where all employees were mailed a QR code. Only a few recipients received URLs that led to the winning landing page. I worked with a global team to assemble the winning and losing pages. Both pages played a video animation. The winning page led to an email form where the winner could submit their contact information. This project was a trans-continental collaboration with another backend dev in Brasil, a video editor in Miami, DevOps in London, and a project manager in New York.",
+			"cta": [
+				{"txt": "Launch Landing Page ", "href": "./work/goldbox-contest/"}
+			]
+		}
+	]
+}

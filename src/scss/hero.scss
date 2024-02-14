@@ -2,6 +2,7 @@
   @include section-flex();
   flex-direction: row;
 	flex-wrap: wrap;
+	border: 0;
   
   .hero-txt-wrapper {
     flex:1 1 410px;
