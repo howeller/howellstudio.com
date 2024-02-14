@@ -22,7 +22,7 @@
 			"img": {
 				"srcset":"assets/synchrony@3x.jpg 2840w, assets/synchrony@2x.jpg 1530w, assets/synchrony@1x.jpg 710w",
 				"src": "assets/synchrony@2x.png",
-				"alt": "Nationwide Preview Site"
+				"alt": "Car Care Landing Page"
 			},
 			"p": "Synchrony Bank tasked us to build a landing page for their Car Care program. It needed to match the look and feel of the existing site. This was a challenge as they only provided a single stylesheet to follow. I created a responsive design that was engaging to users.",
 			"cta": [
