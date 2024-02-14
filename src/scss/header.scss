@@ -60,18 +60,6 @@ header {
 				}
 			}
 
-			a.wipe {
-				border-right: var(--border);
-				color: var(--txt-color);
-				cursor: pointer;
-				font-family: var(--ff-header);
-				padding: 15px 10px;
-				overflow: hidden;
-				display: inline-block;
-				position: relative;
-				line-height: 0;
-			}
-			
 			.nav-h2 {
 				position: relative;
 				margin: 0 auto;
