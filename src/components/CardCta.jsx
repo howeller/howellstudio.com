@@ -1,7 +1,6 @@
 function CardCta({project}) {
 	if (project.cta) {
 		const { cta } = project;
-		// console.log(cta);
 		return (
 			<div className="cta-container">
 			{ cta.map((cta, index) => {
